@@ -1,4 +1,4 @@
-# User
+# User (table create)
 
 - id
 - vehicle_no
@@ -6,7 +6,7 @@
 - model
 - role = [admin, user]
 
-# Fines
+# Fines (create table)
 
 - id
 - tag_id
