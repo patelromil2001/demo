@@ -12,12 +12,11 @@ mysql = MySQL(app)
 @app.route('/success/<name>')
 def success(name):
 
-
 #Executing SQL Statements
 
    with app.app_context():
       amt=100.0
-      q="INSERT INTO fine (tagid, fineamt, entry_date) VALUES ('{}', {}, {})".format(name, amt, date.today())
+      q="INSERT INTO fine (tagid, fineamt, entry_date) VALUES ('{}', {}, {})".format(name, amt, 'CURDATE()')
       cursor = mysql.connection.cursor()
       cursor.execute(q)
       mysql.connection.commit()
